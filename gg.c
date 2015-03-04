@@ -6,7 +6,7 @@
 /*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/01 16:48:53 by mbourdel          #+#    #+#             */
-/*   Updated: 2015/03/01 19:51:55 by jbahus           ###   ########.fr       */
+/*   Updated: 2015/03/01 21:59:05 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ static void	ft_looser(t_env *env)
 {
 	wclear(stdscr);
 	waddstr(stdscr, "Epic fail: YOU LOOSE\nPress key to exit");
+	mvaddstr(2, 0, "Score: ");
+	mvaddstr(2, 7, ft_itoa(env->score));
 	refresh();
 	getch();
 	free(env->grille);
@@ -27,6 +29,8 @@ static void	ft_winner(t_env *env)
 {
 	wclear(stdscr);
 	waddstr(stdscr, "YOU WIN\nPress key for make a fatality");
+	mvaddstr(2, 0, "Score: ");
+	mvaddstr(2, 7, ft_itoa(env->score));
 	refresh();
 	if (getch() == 27)
 	{

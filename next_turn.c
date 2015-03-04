@@ -6,7 +6,7 @@
 /*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 12:24:02 by jbahus            #+#    #+#             */
-/*   Updated: 2015/03/01 18:47:48 by mbourdel         ###   ########.fr       */
+/*   Updated: 2015/03/01 21:49:41 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void			add_new_rand(t_env *env, int ch)
 			env->grille[i][j] = 2;
 		else
 			env->grille[i][j] = 4;
+		env->score += env->grille[i][j];
 		ft_board(env->xy[0], env->xy[1], env);
 	}
 }

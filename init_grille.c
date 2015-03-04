@@ -6,7 +6,7 @@
 /*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/28 11:39:22 by jbahus            #+#    #+#             */
-/*   Updated: 2015/03/01 18:42:56 by mbourdel         ###   ########.fr       */
+/*   Updated: 2015/03/01 21:51:45 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	init_grille(t_env *env)
 		(*env).grille[i][j] = 2;
 	else
 		(*env).grille[i][j] = 4;
+	env->score += env->grille[i][j];
 	while ((*env).grille[i][j] != 0)
 	{
 		i = (int)(4.0 * rand() / (RAND_MAX + 1.0));
@@ -37,4 +38,5 @@ void	init_grille(t_env *env)
 		(*env).grille[i][j] = 2;
 	else
 		(*env).grille[i][j] = 4;
+	env->score += env->grille[i][j];
 }

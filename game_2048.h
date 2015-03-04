@@ -6,7 +6,7 @@
 /*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/27 22:08:55 by jbahus            #+#    #+#             */
-/*   Updated: 2015/03/01 19:52:31 by jbahus           ###   ########.fr       */
+/*   Updated: 2015/03/01 22:00:29 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ struct					s_env
 {
 	int					**grille;
 	int					xy[2];
+	int					score;
 };
 
 void					icolor(void);

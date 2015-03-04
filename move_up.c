@@ -6,7 +6,7 @@
 /*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/01 12:01:16 by jbahus            #+#    #+#             */
-/*   Updated: 2015/03/01 15:41:29 by jbahus           ###   ########.fr       */
+/*   Updated: 2015/03/01 21:48:26 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void		check_up(t_env *env, int i, int j, int *s)
 	}
 	else if (env->grille[i][j - 1] == env->grille[i][k] && *s != j - 1)
 	{
+		env->score += env->grille[i][j - 1] * 2;
 		env->grille[i][j - 1] *= 2;
 		env->grille[i][k] = 0;
 		*s = j - 1;

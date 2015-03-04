@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_board.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbourdel <mbourdel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jbahus <jbahus@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/01 11:22:15 by mbourdel          #+#    #+#             */
-/*   Updated: 2015/03/01 18:29:24 by mbourdel         ###   ########.fr       */
+/*   Updated: 2015/03/01 21:59:31 by jbahus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,7 @@ void			ft_board(int x, int y, t_env *env)
 	mvvline(0, ((y / 4) + (y / 2)), '+', 1);
 	ft_cross(x, y);
 	ft_nbr_to_board(x, y, env);
+	mvaddstr((x - 1), 0, "Score: ");
+	mvaddstr((x - 1), 7, ft_itoa(env->score));
 	return ;
 }
